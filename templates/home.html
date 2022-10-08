@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <h1>Hello world</h1>
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House price</title>
+</head>
+<body>
+    <h1>Boston House Price prediction</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="number" name="CRIM" placeholder="CRIM" required><br>
+        <input type="number" name="ZN" placeholder="ZN" required><br>
+        <input type="number" name="INDUS" placeholder="INDUS" required><br>
+        <input type="number" name="CHAS" placeholder="CHAS" required><br>
+        <input type="number" name="NOX" placeholder="NOX" required><br>
+        <input type="number" name="RM" placeholder="RM" required><br>
+        <input type="number" name="AGE" placeholder="AGE" required><br>
+        <input type="number" name="DIS" placeholder="DIS" required><br>
+        <input type="number" name="RAD" placeholder="RAD" required><br>
+        <input type="number" name="TAX" placeholder="TAX" required><br>
+        <input type="number" name="PTRATIO" placeholder="PTRATIO" required><br>
+        <input type="number" name="B" placeholder="B" required><br>
+        <input type="number" name="LSTAT" placeholder="LSTAT" required><br><br><br>
+        <button type="submit">Predict Price</button>
+    </form>
+    <div style="color: Green;"><h1>{{prediction_text}}</h1</div>
+</body>
 </html>

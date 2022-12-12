@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>House price</title>
 </head>
 <body>
     <h1>Boston House Price prediction</h1>
     <form action="{{url_for('predict')}}" method="post">
-        <input type="number" name="CRIM" placeholder="CRIM" required><br>
-        <input type="number" name="ZN" placeholder="ZN" required><br>
-        <input type="number" name="INDUS" placeholder="INDUS" required><br>
-        <input type="number" name="CHAS" placeholder="CHAS" required><br>
-        <input type="number" name="NOX" placeholder="NOX" required><br>
-        <input type="number" name="RM" placeholder="RM" required><br>
-        <input type="number" name="AGE" placeholder="AGE" required><br>
-        <input type="number" name="DIS" placeholder="DIS" required><br>
-        <input type="number" name="RAD" placeholder="RAD" required><br>
-        <input type="number" name="TAX" placeholder="TAX" required><br>
-        <input type="number" name="PTRATIO" placeholder="PTRATIO" required><br>
-        <input type="number" name="B" placeholder="B" required><br>
-        <input type="number" name="LSTAT" placeholder="LSTAT" required><br><br><br>
+        <input type="number" name="CRIM" placeholder="CRIM" required><p>per capita crime rate by town</p><br>
+        <input type="number" name="ZN" placeholder="ZN" required><p>proportion of residential land zoned for lots over 25,000 sq.ft.</p><br>
+        <input type="number" name="INDUS" placeholder="INDUS" required><p>proportion of non-retail business acres per town</p><br>
+        <input type="number" name="CHAS" placeholder="CHAS" required><p>Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)</p><br>
+        <input type="number" name="NOX" placeholder="NOX" required><p>nitric oxides concentration (parts per 10 million)</p><br>
+        <input type="number" name="RM" placeholder="RM" required><p>average number of rooms per dwelling</p><br>
+        <input type="number" name="AGE" placeholder="AGE" required><p>proportion of owner-occupied units built prior to 1940</p><br>
+        <input type="number" name="DIS" placeholder="DIS" required><p>weighted distances to five Boston employment centres</p><br>
+        <input type="number" name="RAD" placeholder="RAD" required><p>index of accessibility to radial highways</p><br>
+        <input type="number" name="TAX" placeholder="TAX" required><p> full-value property-tax rate per $10,000</p><br>
+        <input type="number" name="PTRATIO" placeholder="PTRATIO" required><p>pupil-teacher ratio by town</p><br>
+        <input type="number" name="B" placeholder="B" required><p>1000(Bk - 0.63)^2 where Bk is the proportion of black people by town</p><br>
+        <input type="number" name="LSTAT" placeholder="LSTAT" required><p>% lower status of the population</p><br><br><br>
         <button type="submit">Predict Price</button>
     </form>
     <div style="color: Green;"><h1>{{prediction_text}}</h1</div>

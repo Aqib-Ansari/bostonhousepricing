@@ -10,6 +10,7 @@
 <body>
     <h1>Boston House Price prediction</h1>
     <form action="{{url_for('predict')}}" method="post">
+        
         <input type="number" name="CRIM" placeholder="CRIM" required><p>per capita crime rate by town</p><br>
         <input type="number" name="ZN" placeholder="ZN" required><p>proportion of residential land zoned for lots over 25,000 sq.ft.</p><br>
         <input type="number" name="INDUS" placeholder="INDUS" required><p>proportion of non-retail business acres per town</p><br>
@@ -23,6 +24,7 @@
         <input type="number" name="PTRATIO" placeholder="PTRATIO" required><p>pupil-teacher ratio by town</p><br>
         <input type="number" name="B" placeholder="B" required><p>1000(Bk - 0.63)^2 where Bk is the proportion of black people by town</p><br>
         <input type="number" name="LSTAT" placeholder="LSTAT" required><p>% lower status of the population</p><br><br><br>
+    
         <button type="submit">Predict Price</button>
     </form>
     <div style="color: Green;"><h1>{{prediction_text}}</h1</div>

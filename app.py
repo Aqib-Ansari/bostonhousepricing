@@ -3,8 +3,8 @@ from flask import Flask, Request,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
 
-app = Flask(__name__)
-
+application = Flask(__name__)
+app=application
 ## laoding the model
 scaler = pickle.load(open('scaling.pkl','rb'))
 regmodel = pickle.load(open('regmodel.pkl','rb'))
